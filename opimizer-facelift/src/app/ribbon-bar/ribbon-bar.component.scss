@@ -1,0 +1,16 @@
+.ribbon {
+    display: flex;
+    background-color: #e3f2fd;
+    padding: 10px;
+    border-bottom: 1px solid #90caf9;
+  
+    .group {
+      margin-right: 20px;
+      h4 {
+        margin: 0 0 5px 0;
+      }
+      button {
+        margin-right: 5px;
+      }
+    }
+  }

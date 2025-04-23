@@ -1,0 +1,10 @@
+<div class="ribbon">
+    <div class="group">
+      <h4>File</h4>
+      <button mat-button *ngFor="let btn of buttonsGroup1" (click)="onButtonClick(btn)">{{ btn }}</button>
+    </div>
+    <div class="group">
+      <h4>Edit</h4>
+      <button mat-button *ngFor="let btn of buttonsGroup2" (click)="onButtonClick(btn)">{{ btn }}</button>
+    </div>
+  </div>

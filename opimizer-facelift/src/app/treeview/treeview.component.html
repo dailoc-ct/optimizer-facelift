@@ -1,0 +1,21 @@
+<ul class="tree">
+    <ng-container *ngFor="let node of treeData">
+      <ng-template [ngTemplateOutlet]="recursiveTree" [ngTemplateOutletContext]="{ node: node }"></ng-template>
+    </ng-container>
+  </ul>
+  
+  <ng-template #recursiveTree let-node>
+    <li>
+      <div class="tree-node" (click)="toggle(node)">
+        <span *ngIf="node.children">
+          {{ node.expanded ? '-' : '+' }}
+        </span>
+        {{ node.label }}
+      </div>
+      <ul *ngIf="node.expanded">
+        <ng-container *ngFor="let child of node.children">
+          <ng-template [ngTemplateOutlet]="recursiveTree" [ngTemplateOutletContext]="{ node: child }"></ng-template>
+        </ng-container>
+      </ul>
+    </li>
+  </ng-template>
